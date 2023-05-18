@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false"
+
+    tools:context=".log_in">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="#0fff"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="10dp"
+                android:src="@drawable/backtopage"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#979797"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:shadowColor="#00000000"
+                    android:shadowDx="10"
+                    android:shadowDy="10"
+                    android:shadowRadius="10"
+                    android:text="Register As Mechanic"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/back" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="205dp"
+                    android:layout_height="21dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:fontFamily="@font/poppins"
+                    android:text="Enter your details to continue"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="312dp"
+                    android:layout_height="wrap_content"
+                    android:background="#11000000"
+                    android:padding="200dp"
+                    app:cardBackgroundColor="#fff"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="277dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            app:cardCornerRadius="40dp">
+
+                            <ImageView
+                                android:id="@+id/mechimg_reg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+
+                                android:src="@drawable/add_image" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <EditText
+                            android:id="@+id/mechName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins"
+                            android:hint="Full Name"
+                            android:inputType="text"
+                            android:textColor="#000"
+                            android:textColorHint="#999"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mechEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:textColor="#000"
+                            android:textColorHint="#999"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mechNIC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins"
+                            android:hint="CNIC without dash"
+                            android:inputType="text"
+
+                            android:maxLength="13"
+                            android:textColor="#000"
+                            android:textColorHint="#999"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mechPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins"
+                            android:hint="Contact Number"
+                            android:inputType="text"
+
+                            android:maxLength="11"
+                            android:textColor="#000"
+                            android:textColorHint="#999"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mechPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+
+                            android:maxLength="11"
+                            android:textColor="#000"
+                            android:textColorHint="#999"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mechAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#000"
+                            android:ems="10"
+                            android:fontFamily="@font/poppins"
+                            android:hint="Full Address"
+                            android:inputType="textPostalAddress"
+                            android:textColor="#000"
+                            android:textColorHint="#999"
+                            android:textSize="14sp" />
+
+
+                        <Switch
+                            android:id="@+id/mechBike"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bike Avialable" />
+
+                        <Switch
+                            android:id="@+id/mechTools"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tools Avialable" />
+
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/mech_Car"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Car Mechanic" />
+
+                            <CheckBox
+                                android:id="@+id/mech_Bike"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="Bike Mechanic" />
+
+                        </RadioGroup>
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/mechIndi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Individual" />
+
+                            <RadioButton
+                                android:id="@+id/mechStore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Store" />
+
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/m_d__locate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="33"
+                                android:text="Click on Get Location"
+                                android:textSize="18sp" />
+
+                            <Button
+                                android:id="@+id/m_d__locate_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="#FFFFFF"
+                                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                                android:text="Get Location"
+                                android:textAllCaps="false"
+                                android:textColor="#000000" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/apply_mech"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3700B3"
+                            android:capitalize="none"
+                            android:fontFamily="@font/poppins"
+                            android:text="Apply"
+                            android:textAllCaps="false"
+                            android:textColor="#fff" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
